@@ -10,6 +10,9 @@ type ReqBody = {
   password: string;
 };
 
+// リクエストがpostの場合、name, email, passwordの入った
+// オブジェクトが1秒待ってからステータスコード204を返す
+// リクエストがpost以外の場合はBadRequestを返す
 const handler = async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
   if (req.method === 'POST') {
     const { name, email, password } = req.body as ReqBody;

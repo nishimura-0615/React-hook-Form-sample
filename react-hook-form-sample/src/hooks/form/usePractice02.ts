@@ -33,7 +33,6 @@ type UsePractice02 = () => {
   handleClickPost: () => Promise<void>;
 };
 
-
 export const usePractice02: UsePractice02 = () => {
   const [loading, setLoading] = useState(false);
 
